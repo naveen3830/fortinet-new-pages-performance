@@ -2,7 +2,7 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid } from 'recharts';
 import { WeeklySummary } from '../types';
-import { theme } from './fortinetTheme';
+import { theme, fortinetColors } from './fortinetTheme';
 
 interface ChartProps {
   data: WeeklySummary[];
@@ -35,7 +35,7 @@ const AiOverviewChart: React.FC<ChartProps> = ({ data }) => {
             <YAxis stroke="#6b7280" />
             <Tooltip content={<CustomTooltip />} />
             <Legend wrapperStyle={{ color: '#374151' }} />
-            <Line type="monotone" dataKey="aiOverviewCount" name="AI Overview Count" stroke={theme.chart.series4} strokeWidth={3} dot={{ r: 5, fill: theme.chart.series4 }} activeDot={{ r: 8 }} />
+            <Line type="monotone" dataKey="aiOverviewCount" name="AI Overview Count" stroke={fortinetColors.primary.green} strokeWidth={3} dot={{ r: 5, fill: fortinetColors.primary.green }} activeDot={{ r: 8 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>

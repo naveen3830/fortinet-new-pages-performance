@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { theme } from './fortinetTheme';
+import { theme, fortinetColors } from './fortinetTheme';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
 
 const MonthlyPagesChart: React.FC = () => {
@@ -31,7 +31,7 @@ const MonthlyPagesChart: React.FC = () => {
               }}
             />
             <Legend wrapperStyle={{ color: '#374151' }} />
-            <Bar dataKey="count" name="New Pages" fill={theme.chart.series4} />
+            <Bar dataKey="count" name="New Pages" fill={fortinetColors.primary.blue} />
           </BarChart>
         </ResponsiveContainer>
       </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { CategoryDistribution } from '../types';
-import { theme } from './fortinetTheme';
+import { theme, fortinetColors } from './fortinetTheme';
 
 interface ChartProps {
   data: CategoryDistribution[];
@@ -33,7 +33,7 @@ const CategoryDistributionChart: React.FC<ChartProps> = ({ data }) => {
                 borderRadius: '0.5rem',
               }}
             />
-            <Bar dataKey="count" fill={theme.chart.series4} barSize={20} />
+            <Bar dataKey="count" fill={fortinetColors.primary.blue} barSize={20} />
           </BarChart>
         </ResponsiveContainer>
       </div>
